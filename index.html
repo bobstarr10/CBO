@@ -1,63 +1,45 @@
+/* Database Connection - db.php */
+<?php
+$host = 'localhost';
+$user = 'root'; // Change if using a different user
+$pass = ''; // Set your MySQL password
+$db_name = 'cbo_website';
+
+$conn = new mysqli($host, $user, $pass, $db_name);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
+
+/* Homepage - index.php */
+<?php include('db.php'); ?>
 <!DOCTYPE html>
-<html >
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,
-        intial-scale=1">
-    <title>Kokoth Community Based Organisation</title>
-    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Organization</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body >
+<body>
     <header>
-        <div class="logo">
-            <img src="" alt="CBO's Logo">
-        </div>
+        <h1>Welcome to Our Community</h1>
         <nav>
-            <ul>
-                <li><a href="#top">Home</a></li>
-                <li><a href="">More information</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Get involved</a></li>
-            </ul>
-        </nav>  
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="events.php">Events</a>
+            <a href="donate.php">Donate</a>
+            <a href="contact.php">Contact</a>
+            <a href="login.php">Login</a>
+        </nav>
     </header>
     <main>
-        <section class="Home">
-            <h1>Welcome to Kokoth Community Based Organisation</h1>
-            <div id="home">
-            <p>Our mission is to combat climate changes in our ecosystems.
-                Together, we can create a sustainable future for generations to come.
-                Different environmental projects proposals include tree planting, eco systems projects and many more.
-            </p>
-            </div>
-            <a href="recipe.html" class="btn">Get Started</a>
-        </section>
-        <section class="introduction">
-            <h2>About the Chef</h2>
-            <div id="introduction">
-            <p>.Hello, I'm Bobo.I have been a chef the past five yearsand now I would like to share with the world and still get to understand more recipes.</p>
-            <p>You all will be able to learn to make a varieties of food starting from starters to main course meals and finally to desserts and drinks.</p>
-            <p>I have been able to attain a degree in Culinary Arts and Hospitality and a masters on Culinary Arts.</p>
-            </div>
-        </section>
-        <section class="contacts">
-            <div id="contacts">
-                <p>For more information, kindly contact us on:</p>
-                <nav>
-                    <ul>
-                        <li>email:Bobo1010@gmail.com</li>
-                        <li>instagram:Bobochefpage1010</li>
-                        <li>phone:0712345678</li>
-                    </ul>
-                </nav>
-            </div>
-        </section>
+        <h2>Building a Better Future Together</h2>
+        <p>Join us in making a difference in the community.</p>
     </main>
     <footer>
-        <center><p>Made with &hearts; by Bobo&copy; </p></center>
+        <p>&copy; 2025 Community Organization. All Rights Reserved.</p>
     </footer>
-    <nav>
-        <center> <div class="back-to-top"><a href="#top">Back to welcome page</a></div></center>
-      </nav>
 </body>
 </html>
