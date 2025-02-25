@@ -1,11 +1,11 @@
 /* Database Connection - db.php */
 <?php
-$host = 'localhost';
-$user = 'root'; // Change if using a different user
-$pass = ''; // Set your MySQL password
+$servername = 'localhost';
+$username = 'root'; // Change if using a different user
+$paswords = ''; // Set your MySQL password
 $db_name = 'cbo_website';
 
-$conn = new mysqli($host, $user, $pass, $db_name);
+$conn = new mysqli($servername, $username, $password, $db_name);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -29,12 +29,12 @@ if ($conn->connect_error) {
         </div>
         <h1>Welcome to the Kokoth Community Based Organisation website</h1>
         <nav>
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
             <a href="about.php">About</a>
             <a href="events.php">Events</a>
             <a href="donate.php">Donate</a>
             <a href="contact.php">Contact</a>
-            <a href="login.php">Login</a>
+            <a href="dashboard.php">Login</a>
         </nav>
     </header>
     <main>
