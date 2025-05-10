@@ -1,0 +1,51 @@
+/* Database Connection - db.php */
+<?php
+$servername = 'localhost';
+$username = 'root'; // Change if using a different user
+$paswords = ''; // Set your MySQL password
+$db_name = 'cbo_website';
+
+$conn = new mysqli($servername, $username, $password, $db_name);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
+
+/* Homepage - index.php */
+<?php include('db.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokoth Community Based Organization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Community Organization Logo" class="logo">
+        </div>
+        <h1>Welcome to the Kokoth Community Based Organisation website</h1>
+        <nav>
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="events.php">Events</a>
+            <a href="donate.php">Donate</a>
+            <a href="contact.php">Contact</a>
+            <a href="dashboard.php">Login</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Help us make a difference</h2>
+        <p>Our mission is to combat climate changes in our ecosystems.
+            Together, we can create a sustainable future for generations to come.
+            Some of the environmental goals we want to attain includes tree planting, eco systems projects and many more.
+            Join us in making a difference in the community.</p>
+    </main>
+    <footer>
+        <p>&copy; 2025 Community Organization. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
